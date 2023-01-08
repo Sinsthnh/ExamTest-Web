@@ -2,45 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới Thiệu</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 
 <body>
-    <header id="header-nav" class="col-sm-12">
-        <div class="content-left">
-            <div class="logo">
-                <img src="./img/Web/Xám_Vòng_tròn_Lá_Hoa_Biểu_trưng-removebg-preview.png" alt="" class="logo-img">
+  <header id="header-nav">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <img src="./img/Web/Xám_Vòng_tròn_Lá_Hoa_Biểu_trưng-removebg-preview.png" alt="" class="logo">
+        </div>
+        <div class="collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Hỏi Đáp</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <div class="setting">
+              <i class="fi fi-rr-settings"></i>
             </div>
-            <ul class="nav navbar-nav">
-                <li><a href="#">Giới Thiệu</a></li>
-                <li><a href="#">Liên Hệ</a></li>
-                <li><a href="#">Hỏi Đáp</a></li>
-            </ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">Hi! Phúc Thịnh <span class="caret"></span></a>
+              <div class="dropdown-menu">
+                <div class="account">
+                  <img src="./img/Web/avata01.png" alt="" class="avata">
+                  <div class="edit-form">
+                    <h4 class="name-account">Phúc Thịnh</h4>
+                    <button class="btnEdit">Chỉnh Sửa</button>
+                  </div>
+
+                </div>
+
+                <hr>
+                <h3 class="LogOut">Đăng Xuất <span class="glyphicon glyphicon-triangle-right"></span></h3>
+              </div>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+  <div id="container">
+    <div id="panel-content" class="row">
+      <div class="content-left col-md-6">
+        <h1 class="title">Tham gia những bài trắc nghiệm</h1>
+        <p class="desption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dolores corporis praesentium
+          animi ea nobis, atque veniam corrupti quasi molestiae possimus sapiente odit alias distinctio aliquid placeat
+          quibusdam error eaque?</p>
+        <button class="btnThamGia">Tham Gia Ngay</button>
+      </div>
+      <div class="content-right col-md-6">
+        <div class="unbackgrount">
+          <div class="upbackground">
+          </div>
         </div>
-        <div class="content-right">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Tiếng Việt</a></li>
-            </ul>
+      </div>
+    </div>
+  </div>
+  <div id="list-subjects">
+    <h2 class="title-list-subjects">Danh sách môn học</h2>
+    <div class="content-center first">
+      <div class="subjects-item">
+        <div class="img"
+          style="background-image: url(./img/imgKhoaHoc/320764019_842416316832222_906149728077204802_n.png);">
         </div>
+        <h4 class="name-subjects">Lập Trình OOP Java</h4>
+      </div>
+      <div class="subjects-item">
+        <div class="img"
+          style="background-image: url(./img/imgKhoaHoc/320931219_1562221464281385_3087643536765337992_n.png);">
+        </div>
+        <h4 class="name-subjects">Lập Trình .Net C#</h4>
+      </div>
+      <div class="subjects-item">
+        <div class="img"
+          style="background-image: url(./img/imgKhoaHoc/320990564_2373019719518944_3326223527967243227_n.png);">
+        </div>
+        <h4 class="name-subjects">Cơ sở dữ liệu</h4>
+      </div>
+    </div>
+  </div>
+  <div id="procedure">
+    <div class="header-procedure">
+      <img src="./img/Web/262.png" alt="" class="img-background01">
+      <h1 class="title-procedure">Sử Dụng Đơn Giản</h1>
+      <img src="./img/Web/80.png" alt="" class="img-background01">
+    </div>
+    <div class="body-procedure">
+      <div class="procedure-item">
+        <div class="content-item-procedure">
+          <div class="block-icon">
+            <i class="fi fi-rr-enter"></i>
+          </div>
+          <h5 class="name-procedure">Đăng Ký</h5>
+          <p class="description-procedure">
+            Đăng lý tài khoản, hoặc đăng nhập nếu đã có tài khoản
+          </p>
+        </div>
+      </div>
+      <div class="procedure-item">
+        <div class="content-item-procedure">
+          <div class="block-icon">
+            <i class="fi fi-rr-grid" ></i>
+          </div>
+          <h5 class="name-procedure">Chọn Môn Học</h5>
+          <p class="description-procedure">
+            Lựa chọn môn học luôn làm trắc nghiệm
+          </p>
+        </div>
+      </div>
+      <div class="procedure-item">
+        <div class="content-item-procedure">
+          <div class="block-icon">
+            <i class="fi fi-rr-checkbox"></i>
+          </div>
+          <h5 class="name-procedure">Làm Trắc Nghiệm</h5>
+          <p class="description-procedure">
+            Hoàn thành bài trắc nhiệm và  hệ thống sẽ chắm điểm của bạn
+          </p>
+        </div>
+      </div>
+    </div>
 
-    </header>
+  </div>
 
-
-
-    <!-- Link thư viện framework -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+  <!-- Link thư viện framework -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

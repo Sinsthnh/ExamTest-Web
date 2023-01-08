@@ -1,60 +1,426 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Inter;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    
 }
 
 /*------------ Animation ----------*/
-
+@keyframes spinner {
+    to {
+        transform: rotate(180deg);
+    }
+}
 
 
 /*-------------Css Header---------- */
 
-#header-nav {
-    margin: 20px 0;
-    overflow: hidden;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+
+
+#header-nav .navbar {
+    background-color: white;
+    margin: 15px 10px;
+    padding: 10px 0;
+    border: none;
+    /* overflow: hidden; */
 }
-#header-nav .content-left {
+
+.container-fluid {
+    /* overflow: hidden; */
     display: flex;
 }
 
-#header-nav .content-left .logo {
-    width: 22%;
+.collapse {
+    width: 88%;
+    margin: auto;
+}
+
+.navbar-header {
+    width: 12%;
+}
+
+.navbar-header .logo {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navbar-header .logo:active {
+    transform: translateY(2px);
+}
+
+
+.container-fluid .collapse {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse .navbar-right {
+    display: flex;
+}
+
+
+.collapse .nav .setting {
+    width: 40px;
+    height: 40px;
+    background-color: #d6ddf8;
+    margin: auto 5px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 #a0a6c0;
+    transition: 0.5s;
+}
+
+.collapse .nav .setting:active {
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+
+.collapse .nav .setting>i {
+    width: 39.4px;
+    height: 39px;
+    font-size: 24px;
+    display: grid;
+    place-items: center;
+    color: #494a4d;
+}
+
+.collapse .nav .setting:hover i {
+    animation: spinner 1s 1 linear;
+    color: #ffffff;
+}
+
+
+.collapse>.nav li a {
+    color: black !important;
+    font-family: Inter;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+
+.collapse li a:hover {
+    color: #B4C3FD !important;
+    transform: translateY(-3px);
+}
+
+/* sub - nav */
+
+.dropdown {
+    position: relative;
+
+}
+
+
+.dropdown .dropdown-toggle:visited {
+    background-color: white !important;
+}
+
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    border: none;
+    top: 60px;
+    margin-right: 20px;
+    overflow: hidden;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.dropdown .dropdown-menu .account {
+    height: 55%;
+    display: flex;
+    /* margin-left: 15px; */
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.dropdown .dropdown-menu .account:hover {
+    color: #B4C3FD;
+    background-color: #f4f4f5;
+}
+
+.dropdown .dropdown-menu .account .avata {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: auto 10px;
+    transition: 0.5s;
+}
+
+.dropdown .dropdown-menu .account .avata:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 1px #B4C3FD;
+}
+
+.dropdown .dropdown-menu .account .edit-form {
+    margin: auto 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu .account .edit-form {
+    margin: auto;
+}
+
+.dropdown-menu .account .edit-form .btnEdit {
+    background-color: #B4C3FD;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    box-shadow: 0px 3px 0 #96a3d4;
+    transition: 0.5s;
+}
+
+.dropdown-menu .account .edit-form .btnEdit:active {
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+.dropdown-menu hr {
+    margin: 2px;
+}
+
+.dropdown-menu .LogOut {
+    margin: 5px 0;
+    padding: 10px 21px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dropdown-menu .LogOut:hover {
+    color: #B4C3FD;
+    background-color: #f4f4f5;
+}
+
+/* ----------Container--------- */
+
+#container {
+    width: 95%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+/* panel-content */
+
+#container #panel-content {
+    width: 100%;
+    height: 350px;
+
+    margin: 0 auto;
+    display: flex;
+}
+
+#panel-content .content-left {
+    margin: auto 0;
+    padding-left: 30px;
+}
+
+#panel-content .content-left .title {
+    font-weight: 700;
+    font-size: 35px;
+    width: 400px;
+    line-height: 50px;
+    margin: 20px 0;
+}
+
+#panel-content .content-left .desption {
+    width: 350px;
+    text-align: justify;
+    margin: 20px 0;
+}
+
+#panel-content .content-left .btnThamGia {
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 600;
+    background-color: #B4C3FD;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 #b1bbe0;
+    transition: 0.5s;
+}
+
+#panel-content .content-left .btnThamGia:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+#panel-content .content-right {
+    padding-right: 30px;
     margin: auto 0;
 }
 
-#header-nav .content-left ul {
-    margin: auto 0 auto 30px;
-
-}
-
-#header-nav .content-left a {
-   padding: 20px 20px;
-   font-weight: 500;
-   font-size: 16px;
-   color: rgb(22, 21, 21);
-
-}
-#header-nav .content-left a:hover {
-    background-color: white;
-    color: #B4C3FD;
-   
+#panel-content .content-right .unbackgrount {
+    width: 100%;
+    height: 350px;
+    background-color: #B4C3FD;
+    border-radius: 10px;
+    position: relative;
     
 }
 
-#header-nav .logo .logo-img {
+#panel-content .content-right .upbackground {
+    width: inherit;
+    height: 350px;
+    background-image: url(./img/Web/anh01.jpg) ;
+ 
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+/* ---------List- subjects--------- */
+
+#list-subjects {
     width: 100%;
+    height: 450px;
+    margin: 100px auto 0;
+    background-color: #EDF2FB;
+    text-align: center;
+    overflow: hidden;
 }
 
 
 
-#header-nav .nav {
+#list-subjects .title-list-subjects {
+    margin: 40px 0 40px;
+    color: #283774;
+    font-weight: 600;
+}
 
+
+#list-subjects .content-center {
+    width: 75%;
+    height: 260px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+
+#list-subjects .subjects-item {
+    margin: auto 20px;
+}
+
+#list-subjects .subjects-item .img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+
+
+#list-subjects .subjects-item .img:hover {
+    box-shadow: 0 0 5px #B4C3FD;
+    transform: translateY(-5px);
+}
+
+#list-subjects .subjects-item .img:hover .joinNow {
+    display: block;
+}
+
+
+/* ------------Procedure------------ */
+
+#procedure {
+    width: 95%;
+    height: 400px;
+    background-color: #B4C3FD;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+
+#procedure .header-procedure {
+    height: 30%;
+    width: 100%;
+    /* background-color: #283774; */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+overflow: hidden;
+}
+
+#procedure .header-procedure .title-procedure {
+    font-weight: 600;
+    color: #2C3B75;
+    margin-top: 40px;
+}
+#procedure .body-procedure {
+    display: flex;
+    justify-content: space-around;
+    /* margin: auto 0; */
+}
+
+#procedure .body-procedure .procedure-item {
+    width: 230px;
+    height: 230px;
+    background-color: #ebeff8;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    transition: 0.5s;
+}
+
+#procedure .body-procedure .procedure-item:hover {
+    transform: translateY(-5px);
+    background-color: #ffffff;
+}
+
+
+#procedure .procedure-item .content-item-procedure {
+    margin: auto ;
+}
+
+#procedure .body-procedure .procedure-item .block-icon {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    
+    background-color: #e2e6f7;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+
+#procedure .procedure-item .block-icon i {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #a6b6f8
+}
+
+#procedure .procedure-item .name-procedure {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 600;
+}
+
+#procedure .procedure-item .description-procedure {
+    font-weight: 500;
 }
