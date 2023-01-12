@@ -58,6 +58,7 @@
   #header-nav .collapse .navbar-left li a:hover {
     background-color: #f4f4f5;
     color: #6079dd;
+    border-radius: 5px;
   }
 
   #header-nav .collapse .navbar-left .gt {
@@ -105,7 +106,7 @@
   }
 
   #container #panel-content .content-left {
-    width: 100%;
+    width: 70%;
     margin: 20px 0 ;
     text-align: center;
     
@@ -113,11 +114,13 @@
   }
 
   #container #panel-content .content-left .title {
-    width: 50%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 
   #container #panel-content .content-left .desption {
-    width: 60%;
+    width: 100%;
   }
 
   #container #panel-content .content-right {
@@ -130,7 +133,82 @@
 
   #container #panel-content .content-right img {
     width: 90%;
-    margin: ;
+   
   }
+
+  /* ------------list-subjects------------ */
+
+  #list-subjects {
+    width: 100%;
+  }
+
+  #list-subjects .content-center {
+    width: 90%;
+    height: 260px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  /* ------------procedure------------ */
+
+  #procedure {
+    height: 340px;
+  }
+
+  #procedure .header-procedure {
+
+  }
+
+  #procedure .body-procedure {
+
+  }
+
+  #procedure .body-procedure .procedure-item {
+    width: 200px;
+    height: 200px;
+  }
+
+
+    /* ------------about-Me------------ */
+    #about-Me {
+
+    }
+    
+    #about-Me #panel-content {
+      height: 350px;
+      margin: 3% 0;
+    }
+
+    #about-Me #panel-content .content-left {
+      width: 60%;
+    }
+
+    #about-Me #panel-content .content-left .title{
+      font-size: 35px;
+    }
+
+    #about-Me #panel-content .content-left .sub-title {
+      font-size: 30px;
+    }
+
+    #about-Me #panel-content .content-left .desption {
+      font-size: 15px;
+    }
+
+    #about-Me #panel-content .content-right img {
+      width: 80%;
+
+      margin: auto 15%;
+    }
+
+    /* ----------option-subjects---------- */
+
+    .desption-option {
+      font-size: 200% !important;
+      margin: 10px 0 !important;
+    }
+
 
 }
