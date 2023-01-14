@@ -3,7 +3,6 @@ var MenuItem02 = document.querySelector(".navbar-left .lh");
 var MenuItem03 = document.querySelector(".navbar-left .mt");
 var MenuItem04 = document.querySelector(".navbar-left .hd");
 var turn = false;
-console.log(listMenuHeader)
 function turnOnOff(){
     if(!turn){
         MenuItem01.style.display = 'block'; 
