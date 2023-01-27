@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COSTAR</title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./CSSfile/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   <link rel="icon" type="image/x-icon" href="./img/Web/comet_1.ico">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-  <link rel="stylesheet" href="./responsive.css">
+  <link rel="stylesheet" href="./CSSfile/responsive.css">
 </head>
 
-<body>
+<body >
   <header id="header-nav">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -26,12 +26,14 @@
 
           <ul class="nav navbar-nav navbar-left">
             <i class="fi fi-rr-menu-burger" onclick="turnOnOff()"></i>
-            <li class="gt"><a href="#">Giới Thiệu</a></li>
-            <li class="lh"><a href="#">Liên Hệ</a></li>
-            <li class="mt"><a href="#">Môn Thi</a></li>
-            <li class="hd"><a href="#">Hỏi Đáp</a></li>
+            <li class="gt"><a href="./pages/aboutUs.html"  target="index">Giới Thiệu</a></li>
+            <li class="lh"><a href="./pages/contact.html"  target="index">Liên Hệ</a></li>
+            <li class="mt"><a href="./pages/couse.html"  target="index">Môn Thi</a></li>
+            <li class="hd"><a href="./pages/Q&A.html" target="index">Hỏi Đáp</a></li>
+            <li class="dn"><a href="./pages/login.html">Đăng nhập</a></li>
+            <li class="dk"><a href="./pages/signin.html">Đăng ký</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <!-- <ul class="nav navbar-nav navbar-right">
             <div class="setting">
               <i class="fi fi-rr-settings"></i>
             </div>
@@ -55,169 +57,17 @@
                 <h3 class="list-Item LogOut"><span class="glyphicon glyphicon-triangle-right"></span> Đăng Xuất</h3>
               </div>
             </li>
+          </ul> -->
+          <ul class="nav navbar-nav navbar-right noAcc">
+            <li class="LogIn"><a href="./pages/login.html">Đăng nhập</a></li>
+            <li class="signIn"><a href="./pages/signin.html">Đăng ký</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
   </header>
-  <div id="container">
-    <div id="panel-content" class="row">
-      <div class="content-left col-md-6">
-        <h1 class="title">Tham gia những bài trắc nghiệm</h1>
-        <p class="desption">Costar là trang web được tạo ra để thực hiện những bài đánh giá online các môn học, chủ để
-          cần kiểm tra kiến thức. Với giao diện bắt mắt các thao tác thuận tiên nên Costar sẽ là lựa chọn phù hợp cho
-          hình thức kiểm tra trắc nghiệm.</p>
-        <button class="btnThamGia">Tham Gia Ngay</button>
-      </div>
-      <div class="content-right col-md-6">
-        <img src="./img/Web/anh02.jpg" alt="">
-      </div>
-    </div>
-  </div>
-  <div id="list-subjects">
-    <h2 class="title-list-subjects">Danh sách môn học</h2>
-    <div class="content-center">
-      <div class="subjects-item">
-        <div class="img"
-          style="background-image: url(./img/imgKhoaHoc/320764019_842416316832222_906149728077204802_n.png);">
-        </div>
-        <h4 class="name-subjects">Lập Trình OOP Java</h4>
-      </div>
-      <div class="subjects-item">
-        <div class="img"
-          style="background-image: url(./img/imgKhoaHoc/320931219_1562221464281385_3087643536765337992_n.png);">
-        </div>
-        <h4 class="name-subjects">Lập Trình .Net C#</h4>
-      </div>
-      <div class="subjects-item">
-        <div class="img"
-          style="background-image: url(./img/imgKhoaHoc/320990564_2373019719518944_3326223527967243227_n.png);">
-        </div>
-        <h4 class="name-subjects">Cơ sở dữ liệu</h4>
-      </div>
-    </div>
-  </div>
-  <div id="procedure">
-    <div class="header-procedure">
-      <img src="./img/Web/262.png" alt="" class="img-background01">
-      <h1 class="title-procedure">Sử Dụng Đơn Giản</h1>
-      <img src="./img/Web/80.png" alt="" class="img-background01">
-    </div>
-    <div class="body-procedure">
-      <div class="procedure-item">
-        <div class="content-item-procedure">
-          <div class="block-icon">
-            <i class="fi fi-rr-enter"></i>
-          </div>
-          <h5 class="name-procedure">Đăng Ký</h5>
-          <p class="description-procedure">
-            Đăng lý tài khoản, hoặc đăng nhập nếu đã có tài khoản
-          </p>
-        </div>
-      </div>
-      <div class="procedure-item">
-        <div class="content-item-procedure">
-          <div class="block-icon">
-            <i class="fi fi-rr-grid"></i>
-          </div>
-          <h5 class="name-procedure">Chọn Môn Học</h5>
-          <p class="description-procedure">
-            Lựa chọn môn học luôn làm trắc nghiệm
-          </p>
-        </div>
-      </div>
-      <div class="procedure-item">
-        <div class="content-item-procedure">
-          <div class="block-icon">
-            <i class="fi fi-rr-checkbox"></i>
-          </div>
-          <h5 class="name-procedure">Làm Trắc Nghiệm</h5>
-          <p class="description-procedure">
-            Hoàn thành bài trắc nhiệm và hệ thống sẽ chắm điểm của bạn
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="about-Me">
-    <div id="panel-content" class="row">
-      <div class="content-left col-md-6">
-        <h1 class="title">Nguyễn Lê Phúc Thịnh</h1>
-        <h3 class="sub-title">Thiết Kê Trang Web</h3>
-        <p class="desption">
-          Tôi là Phúc Thịnh , là một sinh viên học ngành Công Nghệ Thông Tin nên vì thế tôi rất có
-          hứng thú với máy tình và toán học, tôi luôn tìm tòi và học hỏi những kiến thức mới. Nên vì thế tôi luôn thách
-          thức mình với những kiến thức mới mẽ.
-        </p>
-      </div>
-      <div class="content-right col-md-6">
-        <img src="./img/Web/phucthinh.jpg" alt="">
-      </div>
-    </div>
-  </div>
-  <div id="option-subjects">
-    <h2 class="tite-option-subjects">Lựa Chọn Môn Thi</h2>
-    <div class="content">
-      <div class="col-sm-6 img">
-        <img src="./img/Web/21.png" alt="">
-      </div>
-      <div class="col-sm-6 content-option">
-        <div class="row">
-          <h1 class="desption-option">Hãy chọn môn mà bạn thi</h1>
-          <button class="btnThamGia">Tham Gia Ngay</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-  <footer class="footer-distributed">
-
-    <div class="footer-left">
-      <img src="./img/Web/Xám_Vòng_tròn_Lá_Hoa_Biểu_trưng-removebg-preview.png" alt="" class="logo">
-      <p class="footer-links">
-        <a href="#" class="link-1">Home</a>
-
-        <a href="#">About</a>
-
-        <a href="#">Contact</a>
-      </p>
-
-      <p class="footer-company-name">Company Name © 2023</p>
-    </div>
-
-    <div class="footer-center">
-      <p class="footer-company-about">
-        <span>Location and Contact</span>
-      </p>
-      <h5>Melbourne city Victoria, Úc</h5>
-      <h5>SDT : (84)91284803998</h5>
-    </div>
-
-    <div class="footer-right">
-
-      <p class="footer-company-about">
-        <span>About the company</span>
-        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
-        vehicula sit amet.
-      </p>
-
-      <div class="footer-icons">
-
-        <a href="#"><i class="fi fi-brands-facebook"></i></a>
-        <a href="#"><i class="fi fi-brands-twitter"></i></a>
-        <a href="#"><i class="fi fi-brands-linkedin"></i></i></a>
-        <a href="#"><i class="fi fi-brands-github"></i></a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-
-
+  <iframe src="./pages/aboutUs.html" name="index" id="Iframes"  frameborder="0">
+  </iframe>
   <!-- Link thư viện framework -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
@@ -227,6 +77,6 @@
     crossorigin="anonymous"></script>
 
 </body>
-<script src="./index.js"></script>
+<script src="./JSfile/index.js"></script>
 
 </html>
