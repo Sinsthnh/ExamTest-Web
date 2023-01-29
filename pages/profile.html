@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cá nhân</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="icon" type="image/x-icon" href="../img/Web/comet_1.ico">
+    <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="../CSSfile/profile.css">
+    <link rel="stylesheet" href="../CSSfile/couse.css">
+    <link rel="stylesheet" href="../CSSfile/input.css">
+    <link rel="stylesheet" href="../CSSfile/responsive.css">
+</head>
+
+<body>
+    <div class="panel head-page">
+        <div class="panel img-panner">
+            <img src="../img/Web/pexels-bri-schneiter-346529.jpg" alt="">
+        </div>
+        <div class="panel info-profile">
+            <div class="avata-and-edtInfo">
+                <div class="avata-and-name">
+                    <div class="avata">
+                        <img src="../img/avata/avata01.png" alt="">
+                    </div>
+                    <h4 class="name-person">Phúc Thịnh</h4>
+                </div>
+                <button type="button" class="edtInfo btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#editModal"><i class="fi fi-rr-pencil"></i>Chỉnh sửa hồ sơ</button>
+            </div>
+            <div class="introduce-and-hobbie">
+                <div class="introduce">
+                    <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis et
+                        inventore perspiciatis molestias cum quis corporis culpa. Magni, alias. Quisquam alias
+                        consectetur cumque id saepe fugiat ratione quibusdam. Maiores.</p>
+                </div>
+                <div class="hobbie">
+                    <div class="hobbie-item">
+                        <h5 class="name-hobbie"><span class="ec ec-headphones"></span> Nghe Nhạc</h5>
+                    </div>
+                    <div class="hobbie-item">
+                        <h5 class="name-hobbie"><span class="ec ec-computer"></span> Lập trình</h5>
+                    </div>
+                    <div class="hobbie-item">
+                        <h5 class="name-hobbie"><span class="ec ec-books"></span> Đọc sách</h5>
+                    </div>
+                    <div class="hobbie-item">
+                        <h5 class="name-hobbie"><span class="ec ec-city-sunset"></span> Ngắm hoàng hôn</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog .modal-sm modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa hồ sơ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+
+                        <div class="form-group group1">
+                            <label for="upload-photo" class="title-edit">Ảnh nền</label>
+                            <div class="background-img">
+                                <img src="../img/Web/pexels-bri-schneiter-346529.jpg" alt="">
+                            </div>
+                            <label for="upload-photo" class="uploadPhoto">Chỉnh sửa</label>
+                            <input type="file" name="photo" id="upload-photo" accept="image/*" />
+                        </div>
+                        <div class="form-group group2">
+                            <label for="upload-avata" class="title-edit">Ảnh dại diện</label>
+                            <div class="pull">
+                                <div class="avata-img">
+                                    <img src="../img/avata/avata01.png" alt="">
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <label for="upload-avata" class="uploadPhoto">Chỉnh sửa</label>
+                                <input type="file" name="photo" id="upload-avata" accept="image/*" />
+                            </div>
+
+                        </div>
+                        <div class="form-group group3">
+                            <label for="upload-photo" class="title-edit">Tên tài khoản</label>
+                            <div class="form-group input-effect">
+                                <input class="effect-16" type="password" placeholder="Tên tài khoản">
+                            </div>
+                            <button class="btnEdit">Chỉnh sửa</button>
+                        </div>
+                        <div class="form-group group4">
+                            <label for="upload-photo" class="title-edit">Giới thiệu</label>
+                            <div class="form-group ">
+                                <textarea name="" class="effect-13" id="ghiChu" rows="5"
+                                    style="width: 100%; padding: 5px 2px ;" placeholder="Ghi chú"></textarea>
+                            </div>
+                            <button class="btnEdit">Chỉnh sửa</button>
+                        </div>
+                        <div class="form-group group5">
+                            <label for="upload-photo" class="title-edit">Sở thích</label>
+                            <div class="block">
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="listenMusic">
+                                    <label for="listenMusic"><span class="ec ec-headphones"></span> Nghe nhạc</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="watchMovie">
+                                    <label for="watchMovie"><span class="ec ec-tv"></span> Xem Phim</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="coding">
+                                    <label for="coding"><span class="ec ec-computer"></span> Lập trình</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="playVideoGame">
+                                    <label for="playVideoGame"><span class="ec ec-video-game"></span> Chơi game</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="readBook">
+                                    <label for="readBook"><span class="ec ec-books"></span> Đọc sách</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="study">
+                                    <label for="study"><span class="ec ec-open-book"></span> Học tập</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="travel">
+                                    <label for="travel"><span class="ec ec-train"></span> Du lịch</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="viewSunSet">
+                                    <label for="viewSunSet"><span class="ec ec-city-sunset"></span> Ngắm hoàng hôn</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="" id="viewSunRise">
+                                    <label for="viewSunRise"><span class="ec ec-city-sunrise"></span> Ngắm bình minh</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border: 0;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default mainContent col-9">
+        <div class="panel-heading">
+            <h3 class="title">Các môn đã thi</h3>
+            <p class="subtitle">Kiểm tra những kiến thức chuyên ngành</p>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/11.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>CLCO</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Điện toán đám mây</h5>
+                </div>
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/3.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>JABS</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Lập trình JAVA OOP</h5>
+                </div>
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/12.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>MOWE</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Lập trình Moble</h5>
+                </div>
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/15.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>VBPR</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Lập trình Visua studio</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/16.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>INMA</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Lập trình SEO</h5>
+                </div>
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/7.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>ADUIUX</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Giao diện Android</h5>
+                </div>
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/8.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>HTCS</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Xây dựng trang web</h5>
+                </div>
+                <div class="item-courses col-md-3 col-sm-4 col-xs-6">
+                    <div class="block-img">
+                        <img src="../img/imgKhoaHoc/9.png" alt="">
+                    </div>
+                    <div class="block-different">
+                        <div class="id-courses">
+                            <h6>PHPP</h6>
+                        </div>
+                        <div class="question">
+                            <div><i class="fi fi-rr-comment-question"></i></div>
+                            <h6>10/10</h6>
+                        </div>
+                    </div>
+                    <h5 class="name-course">Lập trình PHP</h5>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btnNumber">001</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default"><i class="fi fi-rr-angle-double-left"></i></button>
+                    <button type="button" class="btn btn-default"><i class="fi fi-rr-angle-left"></i></button>
+                    <button type="button" class="btn btn-default"><i class="fi fi-rr-angle-right"></i></button>
+                    <button type="button" class="btn btn-default"><i class="fi fi-rr-angle-double-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div"></div>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+          <img src="../img/Web/Xám_Vòng_tròn_Lá_Hoa_Biểu_trưng-removebg-preview.png" alt="" class="logo">
+          <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+    
+            <a href="#">About</a>
+    
+            <a href="#">Contact</a>
+          </p>
+    
+          <p class="footer-company-name">Company Name © 2023</p>
+        </div>
+    
+        <div class="footer-center">
+          <p class="footer-company-about">
+            <span>Location and Contact</span>
+          </p>
+          <h5>Melbourne city Victoria, Úc</h5>
+          <h5>SDT : (84)91284803998</h5>
+        </div>
+    
+        <div class="footer-right">
+    
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+            vehicula sit amet.
+          </p>
+    
+          <div class="footer-icons">
+    
+            <a href="#"><i class="fi fi-brands-facebook"></i></a>
+            <a href="#"><i class="fi fi-brands-twitter"></i></a>
+            <a href="#"><i class="fi fi-brands-linkedin"></i></i></a>
+            <a href="#"><i class="fi fi-brands-github"></i></a>
+    
+          </div>
+    
+        </div>
+    
+      </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

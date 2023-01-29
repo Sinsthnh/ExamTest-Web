@@ -13,9 +13,10 @@
   <link rel="icon" type="image/x-icon" href="./img/Web/comet_1.ico">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
   <link rel="stylesheet" href="./CSSfile/responsive.css">
+  <link rel="stylesheet" href="./CSSfile/modal.css">
 </head>
 
-<body >
+<body>
   <header id="header-nav">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -26,15 +27,15 @@
 
           <ul class="nav navbar-nav navbar-left">
             <i class="fi fi-rr-menu-burger" onclick="turnOnOff()"></i>
-            <li class="gt"><a href="./pages/aboutUs.html"  target="index">Giới Thiệu</a></li>
-            <li class="lh"><a href="./pages/contact.html"  target="index">Liên Hệ</a></li>
-            <li class="mt"><a href="./pages/couse.html"  target="index">Môn Thi</a></li>
+            <li class="gt"><a href="./pages/aboutUs.html" target="index">Giới Thiệu</a></li>
+            <li class="lh"><a href="./pages/contact.html" target="index">Liên Hệ</a></li>
+            <li class="mt"><a href="./pages/couse.html" target="index">Môn Thi</a></li>
             <li class="hd"><a href="./pages/Q&A.html" target="index">Hỏi Đáp</a></li>
             <li class="dn"><a href="./pages/login.html">Đăng nhập</a></li>
             <li class="dk"><a href="./pages/signin.html">Đăng ký</a></li>
           </ul>
-          <!-- <ul class="nav navbar-nav navbar-right">
-            <div class="setting">
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 7px;">
+            <div class="setting" data-toggle="modal" data-target="#myModal">
               <i class="fi fi-rr-settings"></i>
             </div>
             <li class="dropdown">
@@ -43,30 +44,87 @@
               <a href="#" class="dropdown-toggle" id="iconPeson" data-toggle="dropdown" role="button"
                 aria-haspopup="true" aria-expanded="false"><i class="fi fi-rr-user"></i></a>
               <div class="dropdown-menu">
-                <div class="account">
-                  <img src="./img/Web/avata01.png" alt="" class="avata">
-                  <div class="edit-form">
-                    <h4 class="name-account">Phúc Thịnh</h4>
-                    <button class="btnEdit">Chỉnh Sửa</button>
-                  </div>
+                <a href="./pages/profile.html" target="index" style="margin: 0; padding: 0;">
+                  <div class="account">
+                    <img src="./img/avata/avata01.png" alt="" class="avata">
+                    <div class="edit-form">
+                      <h4 class="name-account">Phúc Thịnh</h4>
+                      <button class="btnEdit">Chỉnh Sửa</button>
+                    </div>
 
-                </div>
+                  </div>
+                </a>
                 <hr>
                 <h3 class="list-Item Setting"><span class="glyphicon glyphicon-cog"></span> Cài Đặt</h3>
                 <hr>
                 <h3 class="list-Item LogOut"><span class="glyphicon glyphicon-triangle-right"></span> Đăng Xuất</h3>
               </div>
             </li>
-          </ul> -->
-          <ul class="nav navbar-nav navbar-right noAcc">
+          </ul>
+          <!-- <ul class="nav navbar-nav navbar-right noAcc">
             <li class="LogIn"><a href="./pages/login.html">Đăng nhập</a></li>
             <li class="signIn"><a href="./pages/signin.html">Đăng ký</a></li>
-          </ul>
+          </ul> -->
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
   </header>
-  <iframe src="./pages/aboutUs.html" name="index" id="Iframes"  frameborder="0">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h3 class="modal-title" style="font-weight: 600; color: rgb(53, 53, 53);">Cài đặt</h3>
+            </div>
+            <div class="modal-body" style="overflow: hidden;">
+                <div class="pull-left">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li  role="presentation">
+                            <a href="#acc" aria-controls="home" role="tab" data-toggle="tab">Thông tin tài khoản</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#list" aria-controls="home" role="tab" data-toggle="tab">Đổi mật khẩu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="edit" role="tabpanel">
+                            <container>
+                                <label class="titel-login">Đăng ký tài khoản</label>
+                                <form action="" method="get">
+                                    <div class="form-group col-md-6">
+                                        <input class="effect-16" type="text" placeholder="Tên đăng nhập">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input class="effect-16" type="text" placeholder="Mật khẩu hiện tại">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input class="effect-16" type="password" placeholder="Mật khẩu mới">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input class="effect-16" type="password" placeholder="Xác nhận">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <button class="btnDoiPass">Đăng ký tài khoản</button>
+                                    </div>
+                                </form>
+                            </container>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="modal-footer">
+
+            </div> -->
+        </div>
+    </div>
+</div>
+  <iframe src="./pages/aboutUs.html" name="index" id="Iframes" frameborder="0">
   </iframe>
   <!-- Link thư viện framework -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
