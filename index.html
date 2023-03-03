@@ -5,136 +5,261 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COSTAR</title>
-  <link rel="stylesheet" href="./CSSfile/index.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   <link rel="icon" type="image/x-icon" href="./img/Web/comet_1.ico">
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-  <link rel="stylesheet" href="./CSSfile/responsive.css">
-  <link rel="stylesheet" href="./CSSfile/modal.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./new-index.css">
+  <link rel="stylesheet" href="./CSSfile/input.css">
+  <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <title></title>
 </head>
 
-<body>
-  <header id="header-nav">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <img src="./img/Web/Xám_Vòng_tròn_Lá_Hoa_Biểu_trưng-removebg-preview.png" alt="" class="logo">
-        </div>
-        <div class="collapse">
+<body ng-app="myApp" ng-controller="CtrlMain">
+  <header class="header-nav ">
+    <div class="container-header">
+      <nav class="navbar-brand  navbar-left flex-column  flex-md-row">
+        <img src="./img/Web/Xám_Vòng_tròn_Lá_Hoa_Biểu_trưng-removebg-preview.png"
+          class="logo-nav-web  d-none d-md-block" alt="">
+        <ul class="list-link" aria-labelledby="list-menu">
+          <li><a href="#trangchu" class="nav-link d-none d-md-block ">Giới Thiệu</a></li>
+          <li><a href="#lienhe" class="nav-link d-none d-md-block ">Liên Hệ</a></li>
+          <li id="subject01" style="display: none;"><a href="#monthi" class="nav-link d-none d-md-block ">Môn thi</a>
+          </li>
+        </ul>
+        <a class="nav-link  d-block  d-md-none" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="bi bi-list d-block  d-md-none" style="font-size: 45px;color: black;"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-sm  d-md-none" aria-labelledby="navbarDropdown">
+          <li><a href="#" class="dropdown-item d-block d-md-none">Giới Thiệu</a></li>
+          <li><a href="#" class="dropdown-item d-block d-md-none">Liên Hệ</a></li>
+          <li class="d-none"><a href="#" class="dropdown-item d-block d-md-none">Môn thi</a></li>
+          <li><a href="#" class="dropdown-item d-none d-sm-block">Đăng Nhập</a></li>
+        </ul>
+      </nav>
+      <nav class="navbar-brand navbar-right " id="AccountGroup">
+        <!-- <a href="#" class=" d-block  d-sm-none link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-fill d-block  d-sm-none" style="font-size: 45px;"></i>
+        </a> -->
 
-          <ul class="nav navbar-nav navbar-left">
-            <i class="fi fi-rr-menu-burger" onclick="turnOnOff()"></i>
-            <li class="gt"><a href="./pages/aboutUs.html" target="index">Giới Thiệu</a></li>
-            <li class="lh"><a href="./pages/contact.html" target="index">Liên Hệ</a></li>
-            <li class="mt"><a href="./pages/couse.html" target="index">Môn Thi</a></li>
-            <li class="hd"><a href="./pages/Q&A.html" target="index">Hỏi Đáp</a></li>
-            <li class="dn"><a href="./pages/login.html">Đăng nhập</a></li>
-            <li class="dk"><a href="./pages/signin.html">Đăng ký</a></li>
-          </ul>
-          <!-- <ul class="nav navbar-nav navbar-right" style="margin-right: 7px;">
-            <div class="setting" data-toggle="modal" data-target="#myModal">
-              <i class="fi fi-rr-settings"></i>
-            </div>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" id="HiPerson" data-toggle="dropdown" role="button"
-                aria-haspopup="true" aria-expanded="false">Hi! Phúc Thịnh <span class="caret"></span></a>
-              <a href="#" class="dropdown-toggle" id="iconPeson" data-toggle="dropdown" role="button"
-                aria-haspopup="true" aria-expanded="false"><i class="fi fi-rr-user"></i></a>
-              <div class="dropdown-menu">
-                <a href="./pages/profile.html" target="index" style="margin: 0; padding: 0;">
-                  <div class="account">
-                    <img src="./img/avata/avata01.png" alt="" class="avata">
-                    <div class="edit-form">
-                      <h4 class="name-account">Phúc Thịnh</h4>
-                      <button class="btnEdit">Chỉnh Sửa</button>
-                    </div>
 
+        <div class="dropdown text-end">
+          <a href="#" class="d-none d-sm-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Hi! Phúc Thinh
+          </a>
+          <a href="#" class="d-block d-sm-none link-dark text-decoration-none " id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-fill d-block  d-sm-none" style="font-size: 45px;"></i>
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a href="#" target="index" style="margin: 0; padding: 0;">
+                <div class="account">
+                  <img  src="./img/avata/{{avata}}" alt="" class="avata" id="Avata-img">
+                  <!-- <img  src="{{avata}}" alt="" class="avata" id="Avata-img"> -->
+                  <div class="edit-form">
+                    <h4 class="name-account" id="NameAcc">Phúc Thịnh</h4>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#ModalEdit"><button class="btnEdit">Chỉnh
+                        Sửa</button></a>
                   </div>
-                </a>
-                <hr>
-                <h3 class="list-Item Setting"><span class="glyphicon glyphicon-cog"></span> Cài Đặt</h3>
-                <hr>
-                <h3 class="list-Item LogOut"><span class="glyphicon glyphicon-triangle-right"></span> Đăng Xuất</h3>
-              </div>
+                </div>
+              </a>
             </li>
-          </ul> -->
-          <ul class="nav navbar-nav navbar-right noAcc">
-            <li class="LogIn"><a href="./pages/login.html">Đăng nhập</a></li>
-            <li class="signIn"><a href="./pages/signin.html">Đăng ký</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"></i> Cài Đặt</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a id="dangXuat" class="dropdown-item" href="#"><i class="bi bi-caret-right-fill"></i> Đăng Xuất</a>
+            </li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-  </header>
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="close" data-dismiss="modal"><span>&times;</span></button>
-                <h3 class="modal-title" style="font-weight: 600; color: rgb(53, 53, 53);">Cài đặt</h3>
-            </div>
-            <div class="modal-body" style="overflow: hidden;">
-                <div class="pull-left">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li  role="presentation">
-                            <a href="#acc" aria-controls="home" role="tab" data-toggle="tab">Thông tin tài khoản</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#list" aria-controls="home" role="tab" data-toggle="tab">Đổi mật khẩu</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="pull-right">
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="edit" role="tabpanel">
-                            <container>
-                                <label class="titel-login">Đăng ký tài khoản</label>
-                                <form action="" method="get">
-                                    <div class="form-group col-md-6">
-                                        <input class="effect-16" type="text" placeholder="Tên đăng nhập">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <input class="effect-16" type="text" placeholder="Mật khẩu hiện tại">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <input class="effect-16" type="password" placeholder="Mật khẩu mới">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <input class="effect-16" type="password" placeholder="Xác nhận">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <button class="btnDoiPass">Đăng ký tài khoản</button>
-                                    </div>
-                                </form>
-                            </container>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- <div class="modal-footer">
-
-            </div> -->
         </div>
+      </nav>
+      <nav class="navbar-brand navbar-right LoginGroup" id="loginGroup">
+        <ul class="noAcc ">
+          <li class="LogIn d-none d-md-block">
+            <button class="d-none d-md-block" type="button" data-bs-toggle="modal" data-bs-target="#ModalLogin">Đăng
+              nhập</button>
+          </li>
+          <li class="signIn  d-none d-sm-block">
+            <a href="./pages/signin.html"><button type="button">Đăng ký</button></a>
+          </li>
+        </ul>
+        <a class="nav-link d-sm-none" href="#" id="navbarDropdown02" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="bi bi-person-fill d-block  d-sm-none" style="font-size: 45px; color: black;"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-sm " aria-labelledby="navbarDropdown02">
+          <li class="LogIn d-block d-sm-none">
+            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#ModalLogin">Đăng nhập</button>
+          </li>
+          <li class="signIn  d-block d-sm-none">
+            <a href="./pages/signin.html"><button type="button" class="btn ">Đăng ký</button></a>
+          </li>
+        </ul>
+
+      </nav>
     </div>
-</div>
-  <iframe src="./pages/aboutUs.html" name="index" id="Iframes" frameborder="0">
-  </iframe>
-  <!-- Link thư viện framework -->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+  </header>
+  <!-- modal dăng nhap -->
+  <div class="modal fade" id="ModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog modal-xl  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title" id="exampleModalLabel">Đăng Nhập</h5>
+          <button type="button" class="btn-close" id="closeDgLogIn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="block-left col-12 col-lg-5" onsubmit="return false" name="frmLogin">
+            <h3 class="title-form">Đăng Nhập Tài Khoản</h3>
+            <div class="mb-3 col-10 form-floating ">
+              <input ng-model="TenDangNhap" name="txtTenDangNhap" type="text" class="form-control" id="tenDangNhap" aria-describedby="nameHelp"
+                placeholder="Tên Đăng Nhập" required>
+                <div class="text-validate" ng-show="frmLogin.txtTenDangNhap.$invalid"> Hãy nhập tên đăng nhập của bạn !</div>
+              <label for="tenDangNhap">Tên đăng nhập</label>
+            </div>
+            <div class="mb-3 col-10 form-floating ">
+              <input type="password" ng-model="MatKhau" name="txtMatKhau" class="form-control" id="matKhau" ria-describedby="passlHelp"
+                placeholder="Mật khẩu" required>
+                <div class="text-validate" ng-show="frmLogin.txtMatKhau.$invalid"> Hãy nhập mật khẩu của bạn !</div>
+              <label for="matKhau">Mật khẩu</label>
+            </div>
+            <div class="mb-3 form-check col-10">
+              <input type="checkbox" class="form-check-input" id="rememberPass">
+              <label class="form-check-label" for="rememberPass">Nhớ mật khẩu</label>
+            </div>
+            <button type="submit" class=" btn-defaut btn-login col-10" id="DangNhap" data-bs-dismiss="modal"
+              aria-label="Close">Đăng nhập</button>
+            <h6 style="overflow: hidden; padding: 5px 0 !important;"><a href="" class="nav-link">Quên mật khẩu</a></h6>
+          </form>
+          <div class="block-right col-0 col-lg-7 ">
+            <div class="block-img">
+              <img src="../img/Web/stock-photo-1056260222.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top-0">
+
+          <a href="../index.html" style="text-decoration: none; color: rgb(56, 56, 56); width: 40%;">
+            <h6><i class="bi bi-caret-left-fill"></i> Trở lại</h6>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="ModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tùy chỉnh</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body flex-column">
+          <ul class="nav nav-tabs nav-tab-edit col-md-3" style=" width: 100%; margin-bottom: 20px;" id="myTab" role="tablist">
+            <li class="nav-item nav-item-edit" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                role="tab" aria-controls="home" aria-selected="true">Đổi mật khẩu</button>
+            </li>
+            <li class="nav-item  nav-item-edit" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                role="tab" aria-controls="profile" aria-selected="false">Đổi thông tin</button>
+            </li>
+          </ul>
+          <div class="tab-content col-md-12" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <form>
+                <div class="mb-3 col-md-12">
+                  <label for="tenDN" class="form-label">Tên đăng nhập</label>
+                  <input type="text" ng-model="nameLogin" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="tenDN">
+                </div>
+                <div class="mb-3 col-md-12">
+                  <label for="matKhauOld" class="form-label">Mật khẩu cũ</label>
+                  <input type="password" ng-model="passwordOld" class="form-control" id="matKhauOld">
+                </div>
+                <div class="mb-3 col-md-12">
+                  <label for="matKhauNew" class="form-label">Mật khẩu mới</label>
+                  <input type="password" ng-model="passwordNew" class="form-control" id="matKhauNew">
+                </div>
+                <button type="submit" id="btn-doiMatKhau" class="btn btn-primary float-end">Đổi mật khẩu</button>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <form class="row g-3" name="frmChangeInfo"  >
+                <div class="col-md-6">
+                  <label for="HotenNew" class="form-label">Họ tên</label>
+                  <input type="text" ng-model="newFullname" class="form-control" id="HotenNew" name="txtHotenNew"  required>
+                  <div class="text-validate" ng-show="frmChangeInfo.txtHotenNew.$invalid"> Hãy nhập họ tên của bạn !</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="TendangNhapNew" class="form-label">Tên đăng nhập</label>
+                  <input type="text" ng-model="newUsername" name="txtTendangNhapNew" class="form-control" id="TendangNhapNew" value="Otto" required>
+                  <div class="text-validate" ng-show="frmChangeInfo.txtTendangNhapNew.$invalid"> Hãy nhập tên đăng nhập của bạn !</div>
+                </div>
+                <div class="col-6">
+                  <label  class="form-label">Giới tính</label>
+                  <div class="form-group d-flex align-items-center" style="padding-top: 10px;">
+                    <div class="form-check col-md-3 ">
+                      <input class="form-check-input" aria-checked="true" value="true" ng-model="newgioiTinh" type="radio" name="flexRadioDefault"
+                        id="GioiTinhNam" checked>
+                      <label class="form-check-label" for="GioiTinhNam">
+                        Nam
+                      </label>
+                    </div>
+                    <br>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" value="false" ng-model="newgioiTinh" type="radio" name="flexRadioDefault"
+                        id="GioiTinhNu">
+                      <label class="form-check-label" for="GioiTinhNu">
+                        Nữ
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="NgaySinhNew" class="form-label">Ngày Sinh</label>
+                  <input ng-model="newBirthday" name="txtNgaySinhNew" type="txt" class="form-control" id="NgaySinhNew" value="00/00/0000" required>
+                  <div class="text-validate" ng-show="frmChangeInfo.txtTendangNhapNew.$invalid"> Hãy nhập ngày sinh của bạn !</div>
+                </div>
+                <div class="col-md-12">
+                  <div class="card text-center">
+                    <div class="card-header bg-white">
+                      <img class="rounded-circle" height="100p" width="100" src="{{newAvata}}" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Cập nhật ảnh đại diện</h5>
+                      <div class="col-md-12">
+                        <input type="file" ng-model="newAvata" class="form-control" id="anhDaiDien" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button ng-click="CapnhatInfo()" class="btn btn-primary float-end" type="submit">Cập nhật thông tin</button>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+              cho
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-view></div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
+  <script src="./index-new.js"></script>
 </body>
-<script src="./JSfile/index.js"></script>
 
 </html>

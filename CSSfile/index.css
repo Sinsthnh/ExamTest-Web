@@ -73,14 +73,16 @@
     padding-right: 25px;
 }
 
-.fi-rr-portrait {
-    display: none;
-}
-
 .collapse  .noAcc .signIn a:hover {
     color: #B4C3FD !important;
     background-color: white;
 }
+
+.fi-rr-portrait {
+    display: none;
+}
+
+
 
 
 .collapse .nav .setting {
@@ -242,6 +244,7 @@
     height: 350px;
     margin: 0 auto;
     display: flex;
+    overflow: hidden;
 }
 
 #panel-content .content-left {
@@ -286,10 +289,21 @@
     margin: auto 0;
 }
 
-#panel-content .content-right img {
-    width: 95%;
+
+#panel-content .content-right .img-banner {
+    width: 85%;
     box-shadow: 20px -20px #B4C3FD;
     border-radius: 10px;
+    float: right;
+}
+
+
+#panel-content .content-right img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+
 }
 
 
@@ -599,189 +613,6 @@
 
 /* ------------fooder----------- */
 
-.footer-distributed {
-    background: #ebedff;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    width: 100%;
-    text-align: left;
-    font: bold 16px sans-serif;
-    padding: 55px 50px;
-    margin: 100px 0 0;
-    
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
-    display: inline-block;
-    vertical-align: top;
-}
-
-
-
-.footer-distributed .footer-left {
-    width: 40%;
-}
-
-.footer-distributed .footer-links {
-    color: #ffffff;
-    margin: 20px 0 12px;
-    padding: 0;
-}
-
-.footer-distributed .footer-links a {
-    display: inline-block;
-    line-height: 1.8;
-    font-weight: 400;
-    text-decoration: none;
-    color: rgb(85, 85, 85);
-}
-
-.footer-distributed .footer-company-name {
-    color: #222;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center {
-    width: 35%;
-
-}
-
-.footer-center .footer-company-about {
-    color: #92999f;
-    font-size: 16px !important;
-    font-weight: normal;
-}
-
-.footer-center .footer-company-about span {
-    color: #1E1843 !important;
-    font-size: 14px !important;
-    font-weight: bold !important;
-    margin-bottom: 20px;
-}
-
-
-.footer-center h5 {
-    margin-bottom: 15px !important;
-    color: #92999f;
-}
-
-.footer-distributed .footer-center i {
-    background-color: #33383b;
-    color: #615f5f;
-    font-size: 25px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
-    margin: 10px 15px;
-    vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope {
-    font-size: 17px;
-    line-height: 38px;
-}
-
-.footer-distributed .footer-center p {
-    display: inline-block;
-    color: #464646;
-    font-weight: 400;
-    vertical-align: middle;
-    margin: 0;
-}
-
-.footer-distributed .footer-center p span {
-    display: block;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 2;
-}
-
-.footer-distributed .footer-center p a {
-    color: #283774;
-
-    text-decoration: none;
-    ;
-}
-
-.footer-distributed .footer-links a:before {
-    content: "|";
-    font-weight: 300;
-    font-size: 20px;
-    left: 0;
-    color: #fff;
-    display: inline-block;
-    padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-    content: none;
-}
-
-/* Footer Right */
-
-.footer-distributed .footer-right {
-    width: 20%;
-}
-
-.footer-distributed .footer-company-about {
-    line-height: 20px;
-    color: #92999f;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
-}
-
-.footer-distributed .footer-company-about span {
-    display: block;
-    color: #1E1843;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons {
-    margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    background-color: #8FA5FA;
-    border-radius: 2px;
-
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    overflow: hidden;
-
-    margin: 0 3px;
-}
-
-.footer-links a {
-    color: #494a4d;
-}
-
-.footer-distributed .footer-icons a i {
-    height: 20px;
-    width: 20px;
-    font-size: 20px;
-    line-height: 40px;
-
-}
-
-.footer-distributed .logo {
-    width: 40%;
-}
 
 iframe {
     width: 100%;

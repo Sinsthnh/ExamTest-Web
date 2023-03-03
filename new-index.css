@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+
+.header-nav {
+  margin: 10px 0px !important;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white !important;
+}
+
+.header-nav .container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.list-link {
+  width: 100%;
+  display: flex !important;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+
+.list-link li {
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+
+
+
+.list-link li a,
+.dropdown-menu li a {
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.list-link li a:hover,
+.dropdown-menu li a:hover {
+  transform: translateY(-5px);
+  color: #B4C3FD;
+}
+
+.logo-nav-web {
+  width: 20%;
+
+}
+
+
+
+.btn-setting {
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #d6ddf8;
+  border-color: #d6ddf8;
+  box-shadow: 0 5px #96a3d4;
+  transition: 0.5s;
+  border: none;
+}
+
+.btn-setting:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.btn-setting:hover {
+  background-color: #96a3d4;
+  color: white;
+}
+
+.btn-setting:hover i {
+  animation: spinner 1s 1 linear !important;
+}
+
+
+
+/* ----------dropdown----------- */
+
+#dropdownUser1 {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+/* #dropdownUser1:hover {
+  color: #8795ce;
+  transform: translateY(-5px);
+} */
+
+
+.dropdown-menu {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+}
+
+.dropdown .dropdown-menu {
+  position: absolute;
+  border: none;
+  top: 20px !important;
+  margin-right: 40px;
+  overflow: hidden;
+  width: auto;
+  border-radius: 5px;
+  transition: 0.5s;
+  width: auto !important;
+}
+
+.dropdown .dropdown-menu a {
+  text-decoration: none;
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.dropdown .dropdown-menu .name-account {
+  color: black;
+  font-size: 20px;
+}
+
+.dropdown .dropdown-menu .account {
+  height: 55%;
+  display: flex;
+  /* margin-left: 15px; */
+  padding: 15px 10px;
+  cursor: pointer;
+  overflow: hidden;
+  width: fit-content;
+
+}
+
+.dropdown .dropdown-menu .account:hover {
+  color: #B4C3FD;
+  background-color: #f4f4f5;
+}
+
+.dropdown .dropdown-menu .account .avata {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: auto 10px;
+  transition: 0.5s;
+}
+
+.dropdown .dropdown-menu .account .avata:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 1px #B4C3FD;
+}
+
+.dropdown .dropdown-menu .account .edit-form {
+  margin: auto 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dropdown-menu .account .edit-form {
+  margin: auto;
+}
+
+.dropdown-menu .account .edit-form .btnEdit {
+  background-color: #B4C3FD;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  box-shadow: 0px 3px 0 #96a3d4;
+  transition: 0.5s;
+}
+
+.dropdown-menu .account .edit-form .btnEdit:active {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+/*------------ noacc -----------*/
+
+
+.navbar-right .noAcc {
+
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.navbar-right .noAcc li {
+  margin: 0 20px;
+}
+
+.navbar-right .noAcc li button {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter;
+
+  font-weight: 500;
+  color: black;
+}
+
+.navbar-right .noAcc .signIn {
+  margin-right: 0;
+}
+
+.navbar-right .noAcc .LogIn {
+  display: flex !important;
+  align-items: center;
+}
+
+.navbar-right .noAcc .LogIn button {
+  background-color: white;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border: none;
+  transition: 0.5s;
+  content: none;
+  border: none;
+}
+
+.navbar-right .noAcc .LogIn button:hover {
+  color: #B4C3FD;
+  transform: translateY(-5px);
+}
+
+.navbar-right .noAcc .signIn button {
+  background-color: #B4C3FD;
+  border-radius: 30px;
+  color: white !important;
+  padding: 20px 30px;
+  text-decoration: none;
+  border: none;
+  transition: 0.5s;
+  content: none;
+}
+
+.navbar-right .noAcc .signIn button:hover {
+  color: #B4C3FD !important;
+  background-color: white;
+}
+
+/* -------dropdown-menu-sm------ */
+.dropdown-menu-sm {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu-sm li {
+  margin: 0;
+  margin-left: 20px;
+  padding: 10px 0;
+  transition: 0.5s;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+
+
+.dropdown-menu-sm li:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 576px) {
+  .header-nav {
+    background-color: #B4C3FD;
+    margin: 0 !important;
+  }
+
+  
+}
+
+/* ----------------------------MODAL---------------------------- */
+
+.modal-content {
+  border-radius: 15px;
+}
+
+.modal-body {
+  display: flex;
+}
+
+#ModalLogin .block-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ModalLogin .block-left .title-form {
+
+  font-family: Inter;
+  font-weight: 600;
+  margin: 10px auto;
+}
+
+#ModalLogin .block-left .input-effect{
+  margin: 25px 0;
+}
+.effect-16 {
+  width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../img/Web/calendar.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+.form-floating .form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.form-floating  label {
+  transform: translateY(8px);
+}
+
+.form-floating .form-control:focus {
+  box-shadow: none;
+}
+
+
+#ModalLogin .block-left .input-effect input,
+#ModalSignin .block-left .input-effect input {
+  padding: 10px 5px;
+  transition: 0.5s;
+  border-radius: 0;
+  background-color: white;
+}
+
+#ModalLogin .block-left .input-effect input:focus,
+#ModalSignin .block-left .input-effect input:focus{
+  box-shadow: none;
+  transition: 0.5s;
+  border-bottom: 2px solid #B4C3FD;
+}
+
+
+.btn-login {
+  background-color: #B4C3FD;
+  transition: 0.5s;
+  box-shadow: 0 5px #96a3d4;
+  color: white;
+  margin: 20px 0;
+  padding: 10px 0;
+  border: none !important;
+  border-radius: 5px;
+}
+
+ .btnDangKy {
+  width: 100%;
+  height: 40px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #B4C3FD;
+  box-shadow: 0 5px #939fcf;
+  transition: 0.5s !important;
+  padding-bottom: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  
+}
+
+ .btnDangKy:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+.btn-login:focus {
+  box-shadow: none;
+}
+
+.btn-login:active {
+
+  transform: translateY(-5px);
+}
+
+.block-right {
+  display: flex;
+  align-items: center;
+}
+
+.block-img {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  float: right;
+}
+
+.block-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 15px -15px #B4C3FD;
+  transform: translateY(7.5px);
+  border-radius: 10px;
+}
+
+
+.modal-footer {
+  background-color: white;
+
+  box-shadow: none;
+  height: 70px !important;
+}
+
+.modal-footer a {
+  width: 100% !important;
+}
+
+.modal-footer .fi-rr-caret-left,
+.modal-footer h6 {
+  font-size: 30px;
+  vertical-align: middle;
+  transition: 0.5s;
+  width: 40%;
+  cursor: pointer;
+  margin-left: 40px;
+
+}
+
+.modal-footer h6 {
+  font-size: 15px;
+}
+
+.modal-footer .fi-rr-caret-left:hover,
+.modal-footer h6:hover {
+  color: #B4C3FD;
+  transform: translateX(-15px);
+}
+
+
+.row {
+  float: left;
+  width: 100%;
+  padding: 0 !important;
+}
+
+
+@media (min-width: 767px) {
+  .row {
+    float: left;
+    width: 100%;
+    padding: 20px 0 30px !important;
+  }
+
+  
+}
+
+/* ---------style Model edit---------- */
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.text-validate {
+  font-family: Inter;
+  font-size: 10px;
+  color: gray;
+  margin: 5px 10px 0;
+}
+

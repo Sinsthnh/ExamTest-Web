@@ -11,52 +11,161 @@
     <title>Môn Thi</title>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="icon" type="image/x-icon" href="../img/Web/comet_1.ico">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-    <link rel="stylesheet" href="../CSSfile/exam.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>        
+    <link rel="stylesheet" href="../../CSSfile/exam.css">
 </head>
 
-<body>
-    <div class="panel panel-default" id="exam-block">
-        <div class="panel-heading">
-            <div class="question"> 
-                <p class="question-content">
-                <font style="font-weight: 600;">Câu 1/10</font> : Các tính chất của lập trình hướng đối tượng là gì ?
-                </p>
+<body ng-app="myApp" >
+    <div class="container">
+        <div class="card" id="examTest-block">
+            <div class="card-heaing bg-white d-flex flex-column flex-sm-row">
+                <div class="info-test">
+                    <h5 class="name-test">{{nameSubject}}</h5>
+                    <p class="description">số lượng câu hỏi : 10 câu hỏi </p>
+                </div>
+                <br>
+                <div class="time-test">
+                    <h5 id="time-min" style="margin: 0; color: white;">
+
+                    </h5>
+                </div>
             </div>
-            <div class="time-test">
-                <h5 class="time-min">10:00 min</h5>
+            <div class="card-body">
+                <div class="question-group" ng-repeat="question in RamdomQuizs">
+                    <div class="question">
+                        <p class="question-content">
+                            <font style="font-weight: 600;">Câu {{$index + 1}}/10</font> : {{question.Text}}
+                        </p>
+                    </div>
+                    <form action="" class="answer-group">
+                        <div class="form-check">
+                            <input  class="form-check-input" value="{{question.Answers[0].Id}}" ng-model="answers"  type="radio" name="flexRadioDefault" id="answer01{{$index}}">
+                            <label class="form-check-label" for="answer01{{$index}}">
+                                {{question.Answers[0].Text}}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" value="{{question.Answers[1].Id}}" ng-model="answers" type="radio" name="flexRadioDefault" id="answer02{{$index}}">
+                            <label class="form-check-label" for="answer02{{$index}}">
+                                {{question.Answers[1].Text}}
+                            </label>
+                        </div>
+                        <div class="form-check" ng-hide="question.Answers[2].Text == null">
+                            <input class="form-check-input" value="{{question.Answers[2].Id}}" ng-model="answers" type="radio" name="flexRadioDefault" id="answer03{{$index}}">
+                            <label class="form-check-label" for="answer03{{$index}}">
+                                {{question.Answers[2].Text}}
+                            </label>
+                        </div>
+                        <div class="form-check" ng-hide="question.Answers[3].Text == null">
+                            <input class="form-check-input" value="{{question.Answers[3].Id}}" ng-model="answers" type="radio"  name="flexRadioDefault" id="answer04{{$index}}" >
+                            <label class="form-check-label" for="answer04{{$index}}">
+                                {{question.Answers[3].Text}} 
+                            </label>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="panel-body">
-            <form action="">
-                <div class="form-group">
-                    <input type="radio" name="anwer" id="option01" style="background-color:#B4C3FD;;">
-                    <label for="option01">Tính đa hình, tính trừu tượng</label>
-                </div>
-                <div class="form-group">
-                    <input type="radio" name="anwer" id="option02">
-                    <label for="option02">Tính đóng gói</label>
-                </div>
-                <div class="form-group">
-                    <input type="radio" name="anwer" id="option03">
-                   
-                    <label for="option03">Tính kế thừa</label>
-                </div>
-                <div class="form-group">
-                    <input type="radio" name="anwer" id="option04">
-                    <label for="option04">Tất cả các ý trên </label>
-                </div>
-            </form>
-        </div>
-        <div class="panel-footer">
-            <h6 class="prev"><i class="fi fi-rr-caret-left"></i>  Trở lại</h6> 
-            <h6 class="next" >Tiếp tục  <i class="fi fi-rr-caret-right"></i></h6> 
+            <div class="card-footer bg-white ">
+                
+                <button type="button" ng-click="nopBai()" class="btn btn-nopBai float-end">Nộp bài</button>
+                
+            </div>
+         
         </div>
     </div>
 
+
+    <div ng-include="'pages/Component/Footer.html'" ></div>
+    <style>
+        #examTest-block {
+            margin: 30px auto;
+            border-radius: 15px !important;
+        }
+        .card-heaing {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            align-items: center;
+        }
+        .card-heaing .info-test .name-test {
+            margin: 0;
+            font-size: 25px;
+        }
+        .card-heaing .info-test .description {
+            margin: 5px 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .card-heaing .time-test {
+            background-color: #CFD9FF;
+            padding: 20px 25px;
+            border-radius: 10px;
+        }
+        .card-heaing .time-test .time-min {
+            margin: 0;
+            color: white;
+        }
+        .card-footer {
+            border: none;
+            border-top: 1px solid rgb(238, 238, 238) !important;
+            
+        }
+        .card-footer .btn-nopBai {
+            padding: 10px 30px;
+            background-color: #b4d3fd;
+            margin: 20px ;
+            color: white;
+            font-weight: 500;
+            
+        }
+        /* ---------------question-------------- */
+        .question-group {
+            width: 100%;
+            height: fit-content;
+        }
+        .question-group .question {
+            padding: 10px 20px;
+            background-color: #F1F4FF;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .question-group .question .question-content {
+           
+        }
+
+        /* -------------------answer------------------- */
+
+
+        .answer-group {
+            padding: 0 20px;
+            margin: 15px 0;
+        }
+
+        .answer-group .form-check {
+            margin: 20px 0;
+        }
+
+        .form-check  .form-check-input {
+            box-shadow: none;
+        }
+
+        .form-check  .form-check-input:focus-within{
+            background-color: #c1cdfd;
+            border: #F1F4FF;
+        }
+    </style>
+    <script>
+
+    </script>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="../JSfile/Exam.js"></script>
 </body>
 
 </html>

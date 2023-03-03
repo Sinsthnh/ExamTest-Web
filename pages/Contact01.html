@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-contact">
+        <div class="container">
+            <h2 class="title-form col-12 col-md-10">Nhắn cho chúng tôi</h2>
+            <form class="row g-3 col-12 col-md-10 " name="frmContact">
+                <div class="col-md-6">
+                  <label for="Hoten" class="form-label">Họ tên</label>
+                  <input type="text" ng-model="Hoten" name="txtHoTen" class="form-control" id="Hoten" placeholder="Nguyễn Lê Phúc Thịnh" required>
+                  <div class="text-validate" ng-show="frmContact.txtHoTen.$invalid"> Hãy nhập Họ tên của bạn !</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="Tendangnhap" class="form-label">Tên đăng nhập</label>
+                  <input type="text" ng-model="TenDangNhap" name="txtTenDangNhap" class="form-control" id="Tendangnhap" placeholder="Phucthinh" required>
+                  <div class="text-validate" ng-show="frmContact.txtTenDangNhap.$invalid"> Hãy nhập tên đăng nhập của bạn !</div>
+                </div>
+                <div class="col-md-12">
+                  <label for="Email" class="form-label">Địa chỉ Email</label>
+                  <div class="input-group has-validation">
+                    <input type="text" name="txtEmail" class="form-control" id="Email" aria-describedby="inputGroupPrepend" required>
+                    <div class="text-validate" ng-show="frmContact.txtEmail.$invalid"> Hãy nhập email của bạn !</div>
+                  </div>
+                </div>
+                <label for="floatingTextarea2" class="form-label">Lời nhắn</label>
+                <div class="form-floating col-md-12">
+        
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">Nội dung gửi</label>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-send" type="submit">Nhắn gửi</button>
+                </div>
+              </form>
+        </div>
+    </div>
+    <div class="container-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15715.453973260315!2d105.75439866248782!3d10.028121600452096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1677047548316!5m2!1svi!2s"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <br>
+
+    <style>
+        iframe {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            height: 400px;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .container-contact {
+
+            padding: 20px 0;
+            margin: 20px 0;
+        }
+
+        .container-contact .title-form {
+            font-family: Inter;
+            font-weight: 600;
+            font-size: 30px;
+            color: rgb(58, 58, 58);
+            text-align: left;
+        }
+
+        h2::before {
+            content: none;
+        }
+
+        .container-contact form,
+        .container-contact .title-form {
+          
+            width: 100%;
+        }
+
+
+        label {
+            font-family: Inter;
+            font-weight: 500;
+        }
+
+
+        .container-contact input[type="text"],
+        #floatingTextarea2 {
+            border: 0;
+            border-radius: 0;
+            background-color: #f0f0f0;
+            padding: 10px;
+
+        }
+
+        .container-contact input[type="text"]:focus {
+            box-shadow: none;
+            background-color: #c7c5c5;
+
+        }
+
+        .btn-send {
+            float: right;
+            padding: 10px 0;
+            width: 30%;
+            background-color: #a9c9f7 !important;
+            border: none;
+            font-family: Inter;
+            font-weight: 500;
+            box-shadow: 0 5px #8eaedb;
+            transition: 0.5s;
+            color: white;
+            margin: 20px 0;
+        }
+
+        .btn-send:active {
+            box-shadow: none;
+            transform: translateY(5px);
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

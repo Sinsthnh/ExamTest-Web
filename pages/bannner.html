@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Banner</title>
+</head>
+
+<body>
+    <div class="container-banner">
+        <div class="row flex-column-reverse flex-sm-row ">
+            <div class="card text-content col-xl-5 d-block d-sm-none d-xl-block  text-center text-sm-start">
+                <h1 class="card-title">Tham gia học online tại trang web</h1>
+                <div class="card-body">
+                    <p class="card-text text-center text-sm-start">Costar cung cấp một số công cụ hữu ích bao gồm mô hình dạng câu hỏi, mô hình
+                        học theo môn học khác nhau, giao diện người dùng tương tác và đề cương học tập cụ thể.</p>
+                    <a href="#" class="btn btnThamGia">Tham gia ngay</a>
+                    <button onclick="myFunction()" class="btn btn-play" id="play"><i
+                            class="bi bi-play-fill"></i></button>
+                </div>
+            </div>
+            <br>
+            <div class="video-content col-xl-6 col-12 ">
+                <div class="card">
+                    <video playsinline autoplay muted loop id="video">
+                        <source src="../img/Web/pexels-tima-miroshnichenko-6550419.mp4" type="video/mp4">
+                    </video>
+                    <div class="card text-content  text-content-sub  col-xl-5 d-xl-none d-none d-sm-block">
+                        <h1 class="card-title">Tham gia học online tại trang web</h1>
+                        <div class="card-body">
+                            <p class="card-text">Costar cung cấp một số công cụ hữu ích bao gồm mô hình dạng câu hỏi, mô
+                                hình
+                                học theo môn học khác nhau, giao diện người dùng tương tác và đề cương học tập cụ thể.
+                            </p>
+                            <a href="#" class="btn btnThamGia">Tham gia ngay</a>
+                            <button onclick="myFunction()" class="btn btn-play" id="play"><i
+                                    class="bi bi-play-fill"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        .container-banner {
+            width: 90%;
+            height: 100%;
+            margin: 20px auto;
+        }
+
+        .container-banner .row {
+            justify-content: space-between;
+            align-items: center;
+            height: inherit;
+        }
+
+        .text-content {
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .text-content .card-title {
+            font-weight: 600;
+            font-family: Inter;
+            
+        }
+
+        .text-content .card-text {
+            color: #0000006b;
+            font-family: Inter;
+            text-align: justify;
+        }
+
+        .text-content .card-body {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .text-content .btnThamGia {
+            color: white;
+            background-color: #b4d3fd;
+            border-radius: 5px;
+            box-shadow: 0 5px #96b2da;
+            transition: 0.5s;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-family: Inter;
+            font-weight: 500;
+        }
+
+        .text-content .btnThamGia:active {
+            transform: translateY(5px);
+            box-shadow: none;
+        }
+
+        .text-content .btn-play {
+            border-radius: 50%;
+            margin-left: 20px;
+            background-color: #b4d3fd;
+        }
+
+        .text-content .btn-play i {
+            font-size: 20px;
+            color: white;
+        }
+
+        .text-content-sub {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1%;
+        }
+
+        .text-content-sub .card-text {
+            color: white;
+        }
+
+        @media (max-width: 960px) {
+            .video-content {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            #video {
+                box-shadow: none !important;
+            }
+        }
+
+        #video {
+            position: relative;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 15px -15px #b4d3fd;
+        }
+
+        /*Thêm một số nội dung phía dưới video */
+        .noi_dung {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* thiết kế nút  */
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /*hiệu ứng hover cho nút*/
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+
+    <script>
+        var btnPlay = document.getElementById("play");
+
+        //Lấy phần tử video
+        var video = document.getElementById("video");
+
+        // lấy phần tử nút
+        var nut = document.getElementById("myBtn");
+
+        // thiết lập trạng thái video và nội dung hiển thị cho nút
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btnPlay.innerHTML = '<i class="bi bi-play-fill"></i>';
+            } else {
+                video.pause();
+                btnPlay.innerHTML = '<i class="bi bi-pause-fill"></i>';
+            }
+        }
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

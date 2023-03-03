@@ -11,11 +11,13 @@
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="icon" type="image/x-icon" href="./img/Web/comet_1.ico">
+  
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <link rel="stylesheet" href="../CSSfile/input.css">
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
 </head>
 
-<body>
+<body ng-app="myApp" ng-controller="signInCtrl">
     <div id="container">
         <div class="pull-left col-xs-12">
             <div class="panel">
@@ -24,34 +26,35 @@
                 </div>
                 <div class="panel-body">
                     <label class="titel-login">Đăng ký tài khoản</label>
-                    <form action="" method="get">
-                        <div class="form-group col-md-6">
-                            <input class="effect-16" type="text" placeholder="Họ tên">
+                    <form onsubmit="return false" needs-validation>
+                        <div class="form-group  col-md-6">
+                            <input class="effect-16" name="fullname" ng-model="signIn.Fullname" type="text" placeholder="Họ tên" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <input class="effect-16" type="text" placeholder="Tên đăng nhập">
+                            <input class="effect-16" ng-model="signIn.Username"  type="text" placeholder="Tên đăng nhập" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <input class="effect-16" type="text" placeholder="Địa chỉ Email">
+                            <input class="effect-16" ng-model="signIn.Email" type="email" placeholder="Địa chỉ Email" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <input class="effect-16" type="date" placeholder="Ngày sinh">
+                            <input class="effect-16" ng-model="signIn.Birthday" type="date" placeholder="dd/mm/yyyy" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <input class="effect-16" type="password" placeholder="Mật khẩu">
+                            <input class="effect-16" ng-model="signIn.Password" type="password" placeholder="Mật khẩu" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <input class="effect-16" type="password" placeholder="Xác nhận">
+                            <input class="effect-16" ng-model="confirm" type="password" placeholder="Xác nhận" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <select name="" id="gt" class="effect-16" style="padding: 0;">
-                                <option value="male">Nam</option>
-                                <option value="famale">Nữ</option>
+                            <select name="" id="gt" class="effect-16" ng-model="signIn.Gender"  style="padding: 0;">
+                                <option value="true">Nam</option>
+                                <option value="false">Nữ</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <button class="btnDangKy">Đăng ký tài khoản</button>
+                            <button class="btnDangKy" id="DangKy">Đăng ký tài khoản</button>
                         </div>
+                    
                     </form>
                 </div>
                 <div class="panel-footer">
@@ -69,13 +72,34 @@
          
         </div>
     </div>
-
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyA6akAgUramaPoVPHWhWOIzEGKGiRM25dc",
+          authDomain: "examtest-web.firebaseapp.com",
+          databaseURL: "https://examtest-web-default-rtdb.firebaseio.com",
+          projectId: "examtest-web",
+          storageBucket: "examtest-web.appspot.com",
+          messagingSenderId: "826380595014",
+          appId: "1:826380595014:web:749a05879af1127febff47"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+      </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
+        <script src="../JSfile/SignIn.js"></script>
 </body>
 
 </html>
